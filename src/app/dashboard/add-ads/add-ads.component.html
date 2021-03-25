@@ -1,0 +1,92 @@
+<ngx-spinner bdColor = "rgba(51, 51, 51, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true">
+    <p style="color: white" > Loading... </p></ngx-spinner>
+<section class="container">
+    <div class="card">
+        <div class="card-header">
+            <section class="row">
+                <section class="col-md-3">
+                    {{'Add Ads' | translate}}
+                </section>
+                <section class="col-md-9"></section>
+            </section>
+        </div>
+        <form #form="ngForm" (ngSubmit)="Add(form.value)">
+        <div class="card-body ">
+            <div class="container ml-5">
+                <!-- <section class="row">
+                    <section class="col-md-6">
+                        <mat-form-field>
+                            <input matInput placeholder="Doctor ID" readonly name="id" [(ngModel)] = "id">
+                        </mat-form-field>
+                    </section>
+                </section> -->
+        <section class="row justify-content-center">
+            <section class="col-md-4">
+                <mat-form-field>
+                    <input matInput placeholder="{{'Enter Title in English' | translate}}" name="ETitle" autocomplete="off" [(ngModel)] = "ETitle">
+                </mat-form-field>
+            </section>
+            <section class="col-md-4">
+                <mat-form-field>
+                    <input matInput type="email" placeholder="{{'Enter Name in Arabic' | translate}}" name="ATitle" autocomplete="off" [(ngModel)] = "ATitle">
+                </mat-form-field>
+            </section>
+            <!-- <section class="col-md-4"></section> -->
+        </section>
+        <section class="row justify-content-center">
+            <section class="col-md-4">
+                <mat-form-field>
+                    <mat-select placeholder="{{'Doctor' | translate}}" name="doctors" [(ngModel)] = "selectedDoctor">
+                      <mat-option *ngFor="let doctor of doctors" [value]="doctor._id">
+                        {{doctor.name}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </section>
+            <section class="col-md-4">
+                <img [src]="imageSrc" style="max-width:300px;max-height:300px"
+                onerror= "this.src='assets/img/1274512-placeholder.png';"/><br>
+                <button (click)="uploadFile()" type="button" mat-raised-button >Upload</button>
+            <mat-form-field class="rid">
+                <input matInput placeholder="Color" name="imageSrc" [(ngModel)] = "imageSrc">
+            </mat-form-field>
+            </section>
+            <!-- <section class="col-md-4"></section> -->
+        </section>
+        <section class="row justify-content-center">
+            <section class="col-md-4">
+                <!-- <mat-form-field>
+                    <input matInput [matDatepicker]="picker" [min]="todayDate" placeholder="Appointment date" formControlName="appointment_date"> 
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field> -->
+                <mat-form-field>
+                    <mat-label>{{'End Date' | translate}}</mat-label>
+                    <input matInput [matDatepicker]="picker" name="endDate" [min]="todayDate" [(ngModel)] = "endDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker">
+                        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                      </mat-datepicker-toggle>
+                 <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </section>
+            <!-- <section class="col-md-4"></section> -->
+            <section class="col-md-4">
+                <!-- <mat-form-field class="rid">
+                    <input matInput placeholder="Color" name="imageSrc" [(ngModel)] = "imageSrc">
+                </mat-form-field> -->
+            </section>
+        </section>
+    </div>
+        </div>
+        <div class="card-footer">
+            <section class="row">
+                <section class="col-md-9"></section>
+                <section class="col-md-3">
+                    <button class="btn  btn-block">{{'Save' | translate}}</button>
+                </section>
+            </section>
+            
+        </div>
+    </form>
+      </div>
+    </section>
