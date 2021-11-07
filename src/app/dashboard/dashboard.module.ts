@@ -48,56 +48,40 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 // import { ModalModule } from '@bit/valor-software.ngx-bootstrap.modal';
 // import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ListViewModule } from '@syncfusion/ej2-angular-lists';
-import { AddCategoryComponent } from './add-category/add-category.component';
-import { ShowDistrictComponent } from './show-district/show-district.component';
-import { AddDistrictComponent } from './add-district/add-district.component';
-import { GetAdminComponent } from './get-admin/get-admin.component';
-import { AddAdminComponent } from './add-admin/add-admin.component';
-import { BookingDoctorsComponent } from './booking-doctors/booking-doctors.component';
-import { BookingClientsComponent } from './booking-clients/booking-clients.component';
-import { ShowAdsComponent } from './show-ads/show-ads.component';
-import { AddAdsComponent } from './add-ads/add-ads.component';
-import { ShowPromoComponent } from './show-promo/show-promo.component';
-import { AddPromoComponent } from './add-promo/add-promo.component';
-import { AddSubscriptionComponent } from './add-subscription/add-subscription.component';
-import { ShowSubscriptionComponent } from './show-subscription/show-subscription.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ShowDoctorComponent } from './show-doctor/show-doctor.component';
-import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { NgxSpinnerModule } from "ngx-spinner";
-import { ShowClientsComponent } from './show-clients/show-clients.component';
-import { BookingComponent } from './booking/booking.component';
-import { GroupComponent } from './group/group.component';
-import { MessagesComponent } from './messages/messages.component';
-import { NotificationsComponent } from './notifications/notifications.component';
-import { TryComponent } from './try/try.component';
+import { DistrictComponent } from './district/district.component';
+import { AdddistrictComponent } from './district/adddistrict/adddistrict.component';
+import { CategoryComponent } from './category/category.component';
+import { AddcategoryComponent } from './category/addcategory/addcategory.component';
+import { AddressComponent } from './address/address.component';
+import { AddAddressComponent } from './address/add-address/add-address.component';
+import { ProductsComponent } from './products/products.component';
+import { AddProductsComponent } from './products/add-products/add-products.component';
+import { AdsComponent } from './ads/ads.component';
+import { AddAdsComponent } from './ads/add-ads/add-ads.component';
+import { PromocodesComponent } from './promocodes/promocodes.component';
+import { AddPromoComponent } from './promocodes/add-promo/add-promo.component';
+import { AdminsComponent } from './admins/admins.component';
+import { AddAdminsComponent } from './admins/add-admins/add-admins.component';
 
 @NgModule({
 	declarations: [
 		SaasComponent,
 		CrmComponent,
-		AddCategoryComponent,
-		ShowDistrictComponent,
-		AddDistrictComponent,
-		GetAdminComponent,
-		AddAdminComponent,
-		BookingDoctorsComponent,
-		BookingClientsComponent,
-		ShowAdsComponent,
+		DistrictComponent,
+		AdddistrictComponent,
+		CategoryComponent,
+		AddcategoryComponent,
+		AddressComponent,
+		AddAddressComponent,
+		ProductsComponent,
+		AddProductsComponent,
+		AdsComponent,
 		AddAdsComponent,
-		ShowPromoComponent,
+		PromocodesComponent,
 		AddPromoComponent,
-		AddSubscriptionComponent,
-		ShowSubscriptionComponent,
-		ProfileComponent,
-		ShowDoctorComponent,
-		AddDoctorComponent,
-		ShowClientsComponent,
-		BookingComponent,
-		GroupComponent,
-		MessagesComponent,
-		NotificationsComponent,
-		TryComponent
+		AdminsComponent,
+		AddAdminsComponent,
 	],
 	imports: [ GridModule,
 		ListViewModule ,
@@ -137,7 +121,6 @@ import { TryComponent } from './try/try.component';
 		ReactiveFormsModule,
 		MatSortModule,
 		NgxSpinnerModule,
-		AgmCoreModule.forRoot({apiKey: 'AIzaSyD4y2luRxfM8Q8yKHSLdOOdNpkiilVhD9k'})
 	],
 	providers: [
 		PageService, SortService, FilterService, GroupService,

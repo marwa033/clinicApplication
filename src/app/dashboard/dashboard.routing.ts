@@ -1,28 +1,21 @@
 import { Routes } from '@angular/router';
 import { SaasComponent } from './saas/saas.component';
 import { CrmComponent } from './crm/crm.component';
-import { AddCategoryComponent } from './add-category/add-category.component';
-import { ShowDistrictComponent } from './show-district/show-district.component';
-import { AddDistrictComponent } from './add-district/add-district.component';
-import { GetAdminComponent } from './get-admin/get-admin.component';
-import { AddAdminComponent } from './add-admin/add-admin.component';
-import { BookingDoctorsComponent } from './booking-doctors/booking-doctors.component';
-import { BookingClientsComponent } from './booking-clients/booking-clients.component';
-import { ShowAdsComponent } from './show-ads/show-ads.component';
-import { AddAdsComponent } from './add-ads/add-ads.component';
-import { ShowPromoComponent } from './show-promo/show-promo.component';
-import { AddPromoComponent } from './add-promo/add-promo.component';
-import { ShowSubscriptionComponent } from './show-subscription/show-subscription.component';
-import { AddSubscriptionComponent } from './add-subscription/add-subscription.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ShowDoctorComponent } from './show-doctor/show-doctor.component';
-import { AddDoctorComponent } from './add-doctor/add-doctor.component';
-import { ShowClientsComponent } from './show-clients/show-clients.component';
-import { BookingComponent } from './booking/booking.component';
-import { MessagesComponent } from './messages/messages.component';
-import { GroupComponent } from './group/group.component';
-import { NotificationsComponent } from './notifications/notifications.component';
-import { TryComponent } from './try/try.component';
+import { AdddistrictComponent } from './district/adddistrict/adddistrict.component';
+import { DistrictComponent } from './district/district.component';
+import { AddcategoryComponent } from './category/addcategory/addcategory.component';
+import { CategoryComponent } from './category/category.component';
+import { AddAddressComponent } from './address/add-address/add-address.component';
+import { AddressComponent } from './address/address.component';
+import { AddAdsComponent } from './ads/add-ads/add-ads.component';
+import { AdsComponent } from './ads/ads.component';
+import { AddPromoComponent } from './promocodes/add-promo/add-promo.component';
+import { PromocodesComponent } from './promocodes/promocodes.component';
+import { AddProductsComponent } from './products/add-products/add-products.component';
+import { ProductsComponent } from './products/products.component';
+import { AddAdminsComponent } from './admins/add-admins/add-admins.component';
+import { AdminsComponent } from './admins/admins.component';
+
 
 
 export const DashboardRoutes: Routes = [
@@ -43,102 +36,90 @@ export const DashboardRoutes: Routes = [
             component : CrmComponent
          },
          {
-            path: 'addcategory',
-            component : AddCategoryComponent
+         path: 'district',
+         component: DistrictComponent
          },
          {
-            path: 'showdistrict',
-            component : ShowDistrictComponent
+         path: 'adddistrict',
+         component: AdddistrictComponent
          },
          {
-            path: 'adddistrict',
-            component : AddDistrictComponent
+         path: 'adddistrict/:id',
+         component: AdddistrictComponent
          },
          {
-            path: 'showadmins',
-            component : GetAdminComponent
+         path: 'category',
+         component: CategoryComponent
          },
          {
-            path: 'addadmins',
-            component : AddAdminComponent
+         path: 'addcategory',
+         component: AddcategoryComponent
          },
          {
-            path: 'bookingdoctor/:id',
-            component : BookingDoctorsComponent
+         path: 'addcategory/:id',
+         component: AddcategoryComponent
          },
          {
-            path: 'bookingclient',
-            component : BookingClientsComponent
+         path: 'address',
+         component: AddressComponent
          },
          {
-            path: 'showads',
-            component : ShowAdsComponent
+         path: 'addaddress',
+         component: AddAddressComponent
          },
          {
-            path: 'addads',
-            component : AddAdsComponent
+         path: 'addaddress/:id',
+         component: AddAddressComponent
          },
          {
-            path: 'showpromo',
-            component : ShowPromoComponent
+         path: 'ads',
+         component: AdsComponent
          },
          {
-            path: 'addpromo',
-            component : AddPromoComponent
+         path: 'addads',
+         component: AddAdsComponent
          },
          {
-            path: 'showsubscription',
-            component : ShowSubscriptionComponent
+         path: 'addads/:id',
+         component: AddAdsComponent
          },
          {
-            path: 'addsubscription',
-            component : AddSubscriptionComponent
+         path: 'promo',
+         component: PromocodesComponent
          },
          {
-            path: 'profile',
-            component : ProfileComponent
+         path: 'addpromo',
+         component: AddPromoComponent
          },
          {
-            path: 'showdoctors',
-            component : ShowDoctorComponent
+         path: 'addpromo/:id',
+         component: AddPromoComponent
          },
          {
-            path: 'adddoctor',
-            component : AddDoctorComponent
+         path: 'products',
+         component: ProductsComponent
          },
          {
-            path: 'showclient',
-            component : ShowClientsComponent
+         path: 'addproduct',
+         component: AddProductsComponent
          },
          {
-            path: 'booking',
-            component : BookingComponent
+         path: 'addproduct/:id',
+         component: AddProductsComponent
          },
          {
-            path: 'booking/:id',
-            component : BookingComponent
-         },
-          {
-            path: 'bookingVendor/:vendorId',
-            component : BookingComponent
-         }
-         ,
-         {
-            path: 'group',
-            component : GroupComponent
+         path: 'admins',
+         component: AdminsComponent
          },
          {
-            path: 'message/:id/:name',
-            component : MessagesComponent
+         path: 'addadmin',
+         component: AddAdminsComponent
          },
          {
-            path: 'notification',
-            component : NotificationsComponent
+         path: 'addadmin/:id',
+         component: AddAdminsComponent
          },
-         {
-            path: 'try',
-            component : TryComponent
-         }
-      ]
+         ]
    }
 ];
+

@@ -11,8 +11,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
    encapsulation: ViewEncapsulation.None,
 })
 export class LoginComponent implements OnInit{
-   mail: string='';
-   passcode: string='';
+   email: string='';
+   password: string='';
    tries: any;
 
   constructor( public authService: AuthService,
@@ -22,40 +22,13 @@ export class LoginComponent implements OnInit{
    // when email and password is correct, user logged in.
    login(value) {
     this.spinner.show();
-      this.authService.loginUser(value).
-      then( responsedata => { this.tries = responsedata;
-      
-         this.Profile() 
+      this.authService.login(value).
+      then( responsedata => { this.tries = responsedata; 
          setTimeout(() => {
             this.spinner.hide();
           },this.tries);
       });
    }
-
-   Profile(){
-      this.authService.GetProfile().
-                then( getProfileResults => { getProfileResults
-                  this.getRole(getProfileResults.admin.role)
-                  this.getAdminId(getProfileResults.admin.userId)
-                  this.getAdminName(getProfileResults.name)
-                });
-  }
-  
-  getRole(value) {
-    localStorage.setItem('adminRole', JSON.stringify(value));
-    var role = JSON.parse(localStorage.getItem('adminRole'));
-    console.log(role)
-    }
-    getAdminId(value) {
-      localStorage.setItem('adminId', JSON.stringify(value));
-      var adminID = JSON.parse(localStorage.getItem('adminId'));
-      console.log(adminID)
-      }
-      getAdminName(value) {
-        localStorage.setItem('adminName', JSON.stringify(value));
-        var adminName = JSON.parse(localStorage.getItem('adminName'));
-        console.log(adminName)
-        }
     ngOnInit(){
     }
 

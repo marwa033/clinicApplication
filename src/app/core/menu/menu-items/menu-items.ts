@@ -4,11 +4,8 @@ export interface ChildrenItems {
   state: string;
   name: string;
   type?: string;
-  // icon: string;
-  // children?: ChildrenItems[];
-
 }
-///////
+
 export interface Menu {
   state: string;
   name: string;
@@ -19,120 +16,89 @@ export interface Menu {
 
 const MENUITEMS = [
   {
-    state:'',
-    name: 'Home',
-    type: 'button',
-    icon: 'home',
-
-  },  {
-    state: 'dashboard',
-    name: 'District',
-    type: 'sub',
-    icon: 'account_balance',
-    children: [
-      {state: 'showdistrict', name: 'Show All' , type: 'sub', icon: 'menu'},
-      {state: 'adddistrict', name: 'Add District' , type: 'sub', icon: 'menu'},
-    ]
+	 state: 'crm',
+	 name: 'الرئسية',
+	 type: 'button',
+	 icon: 'home',
   },
   {
-    state: 'dashboard',
-    name: 'Category',
-    type: 'sub',
-    icon: 'category',
-    children: [
-      {state: 'showcategory', name: 'Show All' , type: 'sub', icon: 'menu'},
-      {state: 'addcategory', name: 'Add Category' , type: 'sub', icon: 'menu'},
-    ]
-  },
-
-  {
-    state: 'dashboard',
-    name: 'Ads',
-    type: 'sub',
-    icon: 'addchart',
-    children: [
-      {state: 'showads', name: 'Show All' , type: 'sub', icon: 'menu'},
-      {state: 'addads', name: 'Add Ads' , type: 'sub', icon: 'menu'},
-    ]
-  },
-
-  {
-    state: 'dashboard',
-    name: 'Promo Codes',
-    type: 'sub',
-    icon: 'money',
-    children: [
-      {state: 'showpromo', name: 'Show All' , type: 'sub', icon: 'menu'},
-      {state: 'addpromo', name: 'Add Promo Codes' , type: 'sub', icon: 'menu'},
-    ]
-  },  {
-    state: 'dashboard',
-    name: 'Admins',
-    type: 'sub',
-    icon: 'account_box',
-    children: [
-      {state: 'showadmins', name: 'Show All' , type: 'sub', icon: 'menu'},
-      {state: 'addadmins', name: 'Add Admins' , type: 'sub', icon: 'menu'},
-    ]
+	 state: 'dashboard',
+	 name: 'المنتجات',
+	 type: 'sub',
+	 icon: 'home',
+	 children: [
+		{state: 'products', name: 'عرض'},
+		{state: 'addproduct', name: 'اضف'}
+	 ]
   },
   {
-    state: 'dashboard',
-    name: 'Doctors',
-    type: 'sub',
-    icon: 'enhanced_encryption',
-    children: [
-      {state: 'showdoctors', name: 'Show All' , type: 'sub', icon: 'menu'},
-      {state: 'adddoctor', name: 'Add Doctor' , type: 'sub', icon: 'menu'},
-    ]
+	 state: 'dashboard',
+	 name: 'الفئات',
+	 type: 'sub',
+	 icon: 'home',
+	 children: [
+		{state: 'category', name: 'عرض'},
+		{state: 'addcategory', name: 'اضف'}
+	 ]
   },
   {
-    state: 'dashboard',
-    name: 'Clients',
-    type: 'sub',
-    icon: 'contacts',
-    children: [
-      {state: 'showclient', name: 'Show All' , type: 'sub', icon: 'menu'}
-    ]
+	 state: 'dashboard',
+	 name: 'المنطقة',
+	 type: 'sub',
+	 icon: 'home',
+	 children: [
+		{state: 'district', name: 'عرض'},
+		{state: 'adddistrict', name: 'اضف'}
+	 ]
   },
   {
-    state: 'dashboard',
-    name: 'Bookings',
-    type: 'sub',
-    icon: 'menu',
-    children: [
-      {state: 'booking', name: 'Show All' , type: 'sub', icon: 'menu'}
-    ]
+	 state: 'dashboard',
+	 name: 'العنوان',
+	 type: 'sub',
+	 icon: 'home',
+	 children: [
+		{state: 'address', name: 'عرض'},
+		{state: 'addaddress', name: 'اضف'}
+	 ]
   },
   {
-    state: 'dashboard',
-    name: 'Chat',
-    type: 'sub',
-    icon: 'chat',
-    children: [
-      {state: 'group', name: 'Group Chat' , type: 'sub', icon: 'menu'},
-      // {state: 'message', name: 'messages' , type: 'sub', icon: 'menu'}
-    ]
+	 state: 'dashboard',
+	 name: 'اعلانات',
+	 type: 'sub',
+	 icon: 'home',
+	 children: [
+		{state: 'ads', name: 'عرض'},
+		{state: 'addads', name: 'اضف'}
+	 ]
   },
   {
-    state: 'dashboard',
-    name: 'Notifications',
-    type: 'sub',
-    icon: 'notifications',
-    children: [
-      {state: 'notification', name: 'Send Notifications' , type: 'sub', icon: 'menu'},
-    ]
-  }
-
-
-  
+	 state: 'dashboard',
+	 name: 'خصومات',
+	 type: 'sub',
+	 icon: 'home',
+	 children: [
+		{state: 'promo', name: 'عرض'},
+		{state: 'addpromo', name: 'اضف'}
+	 ]
+  },
+  {
+	 state: 'dashboard',
+	 name: 'المشرفين',
+	 type: 'sub',
+	 icon: 'home',
+	 children: [
+		{state: 'admins', name: 'عرض'},
+		{state: 'addadmin', name: 'اضف'}
+	 ]
+  },
 ];
 
 @Injectable()
 export class MenuItems {
   getAll(): Menu[] {
-    return MENUITEMS;
+	 return MENUITEMS;
   }
   add(menu:any) {
-    MENUITEMS.push(menu);
+	 MENUITEMS.push(menu);
   }
 }

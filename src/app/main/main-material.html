@@ -1,5 +1,5 @@
 <!-- <ngx-spinner bdColor = "rgba(51, 51, 51, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true">
-   <p style="color: white" > Loading... </p></ngx-spinner> -->
+   </ngx-spinner> -->
 <div id = "main-app" class="app sidebar-color-dark header-color-dark" [dir]="layout" [ngClass]="{'app-dark': dark, 'collapsed-sidebar': coreService.collapseSidebar, 'compact-sidebar': compactSidebar, 'customizer-in': customizerIn}" [class.side-panel-opened]="coreService.sidenavOpen" [class.side-panel-closed]="!coreService.sidenavOpen">
 <mat-sidenav-container class="gene-container">
    <mat-sidenav #sidenav [(mode)]="coreService.sidenavMode" [(opened)]="coreService.sidenavOpen" class="sidebar-area">
@@ -22,7 +22,7 @@
                <mat-icon>account_circle</mat-icon>
             </div>
          </button>
-         <div class="language-dropdown-wrap">
+         <!-- <div class="language-dropdown-wrap">
             <button mat-button [matMenuTriggerFor]="menu_activator">
               <img width="24" height="24" [src]="selectImage">
             </button>
@@ -49,7 +49,7 @@
                   </div>
                </div>
             </mat-menu>
-         </div>
+         </div> -->
       </div>
    </mat-toolbar>
    <div class="gene-base-container" #scrollContainer>

@@ -36,7 +36,7 @@ export class MainComponent implements OnInit, AfterContentChecked {
 	chatList              : any;
 	currentUrl            : any;
 	root                  : any ;
-	layout                : any ="ltr";
+	layout                : any ="rtl";
 	currentLang           : any ;
 	customizerIn          : boolean = false;
 	showSettings          : boolean = false;
